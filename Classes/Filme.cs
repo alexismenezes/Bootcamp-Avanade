@@ -1,8 +1,9 @@
 using System;
+using DIO.Series;
 
-namespace DIO.Series
+namespace dio_dotnet_poo_lab_2.Classes
 {
-    public class Serie : EntidadeBase
+    public class Filme : EntidadeBase
     {
         private Genero Genero { get; set; }
 		private string Titulo { get; set; }
@@ -10,7 +11,7 @@ namespace DIO.Series
 		private int Ano { get; set; }
         private bool Excluido {get; set;}
         
-		public Serie(int id, Genero genero, string titulo, string descricao, int ano)
+		public Filme(int id, Genero genero, string titulo, string descricao, int ano)
 		{
 			this.Id = id;
 			this.Genero = genero;
@@ -46,6 +47,6 @@ namespace DIO.Series
 		}
         public void Excluir() {
             this.Excluido = true;
-        }
+        }        
     }
 }
